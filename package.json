@@ -1,0 +1,13 @@
+{
+  "name": "todo-app-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)",
+  "main": "./src/index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "compile:scss": "sass --watch src/css:public"
+  },
+  "author": "Sebastian LEON FLORES",
+  "license": "ISC"
+}
