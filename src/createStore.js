@@ -1,3 +1,5 @@
+import { todos as todosReducer } from "./reducers/index.js";
+
 export function createStore(reducer) {
   let state;
   let listeners = [];
@@ -23,3 +25,9 @@ export function createStore(reducer) {
     dispatch,
   };
 }
+
+const store = createStore(todosReducer);
+
+export const dispatch = store.dispatch;
+export const subscribe = store.subscribe;
+export const getState = store.getState;
