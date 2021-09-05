@@ -9,23 +9,23 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="/images/favicon-32x32.png"
     />
 
     <title>Todo app</title>
   </head>
   <body>
-    <div class="page">
+    <div class="container">
       <div class="hero">
-        <div class="header">
+        <header class="header">
           <div class="logo">
             <img src="./src/images/icon-logo.svg" alt="logo" />
           </div>
           <div class="theme">
             <img src="./src/images/icon-moon.svg" alt="logo" />
           </div>
-        </div>
-        <div class="todos">
+        </header>
+        <main class="todos">
           <div class="todos__form">
             <div class="todos__select-box">
               <div class="todos__select"></div>
@@ -36,44 +36,22 @@
               placeholder="Create a new todo..."
             />
           </div>
-          <div class="list">
-            <div class="list-item">
-              <div class="list-item__completable" style="text-decoration: none">
-                <div class="list-item__select-box">
-                  <div class="list-item__select-wrapper">
-                    <div class="list-item__select">
-                      <img
-                        src="./src/images/icon-check.svg"
-                        class="list-item__icon-check"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="list-item__text">test</div>
-              </div>
-              <button class="list-item__cross">
-                <img
-                  src="./src/images/icon-cross.svg"
-                  class="list-item__icon-cross"
-                />
-              </button>
-            </div>
+          <ul class="list"></ul>
+          <div class="list__footer">
+            <div class="list__items-left"></div>
+            <button class="list__items-clear">Clear completed</button>
           </div>
-          <div class="list-clear"></div>
-          <div class="todos__footer">
-            <div class="todos__items-left"></div>
-            <div class="todos__filters"></div>
-            <div class="todos__clear"></div>
+          <div class="filters">
+            <button class="filters__item filters__item-all">All</button>
+            <button class="filters__item filters__item-active">Active</button>
+            <button class="filters__item filters__item-completed">
+              Completed
+            </button>
           </div>
-        </div>
+        </main>
       </div>
     </div>
-    <!-- <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </div> -->
-    <script type="module" src="src/index.js"></script>
+
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>

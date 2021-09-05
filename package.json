@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)",
   "main": "./src/index.js",
-  "dependencies": {},
-  "devDependencies": {},
   "scripts": {
-    "compile:scss": "sass --watch src/css:public"
+    "build": "NODE_ENV='production' webpack",
+    "start": "webpack-dev-server"
   },
   "author": "Sebastian LEON FLORES",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.0"
+  }
 }

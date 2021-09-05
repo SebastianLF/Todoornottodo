@@ -1,4 +1,7 @@
-export function todos(state = [], action) {
+import { GET_TODOS } from "../actions/index.js";
+import { initialState } from "../utils/data.js";
+
+export function todos(state = initialState, action) {
   switch (action.type) {
     case "ADD_TODO":
       return state.concat(action.todo);
@@ -10,18 +13,10 @@ export function todos(state = [], action) {
           ? todo
           : Object.assign({}, todo, { completed: !todo.completed })
       );
+    case "CLEAR_COMPLETED":
+      return state.filter((todo) => todo.completed !== true);
+    case GET_TODOS:
     default:
       return state;
   }
 }
-
-/*
-{
-  type: '...',
-  todo: {
-    id: 1,
-    name: '...',
-    completed: true
-  }
-}
-*/
