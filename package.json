@@ -4,12 +4,14 @@
   "description": "![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)",
   "main": "./src/index.js",
   "scripts": {
-    "build": "NODE_ENV='production' webpack",
-    "start": "webpack-dev-server"
+    "dev": "npm run clean && parcel public/index.html --out-dir development -p 3000",
+    "build": "rimraf ./dist && parcel build public/*.html --out-dir dist --public-url ./",
+    "clean": "rimraf ./development && rimraf ./.cache"
   },
   "author": "Sebastian LEON FLORES",
   "license": "ISC",
   "devDependencies": {
+    "sass": "^1.39.0",
     "webpack": "^5.52.0",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.1.0"
