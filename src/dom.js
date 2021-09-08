@@ -1,5 +1,7 @@
 import { handleAnimations } from "./animations.js";
 import { toggleTodo, removeTodo } from "./actions/index.js";
+import iconCheck from "./images/icon-check.svg";
+import iconCross from "./images/icon-cross.svg";
 
 export function removeTodoFromDom(node, id) {
   node.addEventListener("click", (e) => {
@@ -43,17 +45,12 @@ export function addTodoToDom(todo) {
     select,
     "list-item__icon-check",
     "img",
-    "./src/images/icon-check.svg"
+    iconCheck
   );
   const text = appendTo(listItemCompletable, "list-item__text");
   const removeBtn = appendTo(listItem, "list-item__cross", "button");
   const removeIconClasses = ["list-item__icon-cross", "hidden"];
-  const removeIcon = appendTo(
-    removeBtn,
-    removeIconClasses,
-    "img",
-    "./src/images/icon-cross.svg"
-  );
+  const removeIcon = appendTo(removeBtn, removeIconClasses, "img", iconCross);
 
   text.innerHTML = todo.name;
   parent.appendChild(listItem);
