@@ -1,4 +1,4 @@
-import { subscribe, getState } from "/src/createStore.js";
+import { subscribe, getState } from "./createStore.js";
 import { addTodo, clearCompleted, getTodos } from "./actions/index.js";
 import { addTodoToDom } from "./dom.js";
 import { dispatch } from "./createStore.js";

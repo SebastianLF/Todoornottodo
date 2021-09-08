@@ -22,11 +22,11 @@
 
 .hero {
   height: 12.5rem;
-  background: url("/src/images/bg-mobile-light.jpg");
+  background: url("../images/bg-mobile-light.jpg");
   background-repeat: no-repeat;
 
   @media screen and (min-width: 376px) {
-    background: url("/src/images/bg-desktop-light.jpg");
+    background: url("../images/bg-desktop-light.jpg");
   }
 
   padding: 3rem 1.5rem;
